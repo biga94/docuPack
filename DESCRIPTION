@@ -1,12 +1,12 @@
 Package: docuPack
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Title: A Package to Generate Function Documentation
+Version: 0.1.0
+Authors@R: person("Davide", "Biganzoli", email = "davidebiganzoli@icloud.com", role = c("aut", "cre"))
+Description: A package that generates function documentation for a given R package and outputs it as a PDF file.
+Depends: R (>= 3.5.0)
+License: MIT
 Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+LazyData: true
+RoxygenNote: 7.1.1
+URL: https://github.com/biga94/docuPack
+BugReports: https://github.com/biga94/docuPack/issues
