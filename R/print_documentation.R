@@ -7,14 +7,14 @@ print_documentation <- function(package_name) {
   library(knitr)
   library(rmarkdown)
 
-  # Ottieni l'elenco di tutti gli oggetti nel namespace del pacchetto
+  #elenco di tutti gli oggetti nel namespace del pacchetto
   all_functions <- ls(getNamespace(package_name), all.names = TRUE)
 
-  # Crea il file Markdown
+  # Creazione Markdown
   output_file <- paste0(package_name, "_functions_output.md")
   sink(output_file)
 
-  # Intestazione del file Markdown
+  # Intestazione Markdown
   cat("# Function Code for Package", package_name, "\n\n")
 
   # Creazione dell'indice delle funzioni
@@ -27,7 +27,7 @@ print_documentation <- function(package_name) {
   }
   cat("\n\n")
 
-  # Itera attraverso l'elenco degli oggetti e visualizza il codice di ciascuna funzione
+  # Iterazione attraverso l'elenco degli oggetti e visualizza il codice di ciascuna funzione
   for (func_name in all_functions) {
     func <- get(func_name, envir = asNamespace(package_name))
     if (is.function(func)) {
@@ -38,7 +38,7 @@ print_documentation <- function(package_name) {
     }
   }
 
-  # Chiudi il file Markdown
+  # Chiudere il file Markdown
   sink()
 
   # Converti il file Markdown in PDF con indice
