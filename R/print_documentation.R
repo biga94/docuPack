@@ -19,13 +19,15 @@ print_documentation <- function(package_name) {
 
   # Creazione dell'indice delle funzioni
   cat("## Index of Functions\n")
-  for (func_name in all_functions) {
-    func <- get(func_name, envir = asNamespace(package_name))
-    if (is.function(func)) {
-      cat(sprintf("- [%s](#%s)\n", func_name, func_name))
-    }
+for (func_name in all_functions) {
+  func <- get(func_name, envir = asNamespace(package_name))
+  if (is.function(func)) {
+    # Escape del carattere #
+    safe_func_name <- gsub("#", "\\\\#", func_name)
+    cat(sprintf("- [%s](#%s)\n", func_name, safe_func_name))
   }
-  cat("\n\n")
+}
+cat("\n\n")
 
   # Iterazione attraverso l'elenco degli oggetti e visualizza il codice di ciascuna funzione
   for (func_name in all_functions) {
