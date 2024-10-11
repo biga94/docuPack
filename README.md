@@ -1,4 +1,9 @@
 # docuPack 
+[![CRAN Status](https://www.r-pkg.org/badges/version/docuPack)](https://CRAN.R-project.org/package=docuPack)
+[![Build Status](https://github.com/biga94/docuPack/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/biga94/docuPack/actions)
+[![Coverage Status](https://codecov.io/gh/biga94/docuPack/branch/main/graph/badge.svg)](https://codecov.io/gh/biga94/docuPack)
+[![GitHub release](https://img.shields.io/github/release/biga94/docuPack.svg)](https://github.com/biga94/docuPack/releases)
+
 **docuPack** is an R package designed to generate a detailed documentation file for any installed R package. It extracts the source code of all functions within a specified package, creates a markdown file, and converts it into a PDF. This allows users to inspect how functions perform calculations, including the wrapped sub-functions. 
 
 ## Installation 
