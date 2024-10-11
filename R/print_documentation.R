@@ -22,8 +22,8 @@ print_documentation <- function(package_name) {
   # Elenco di tutti gli oggetti nel namespace del pacchetto
   all_functions <- ls(getNamespace(package_name), all.names = TRUE)
 
-  # Creazione file temporaneo Markdown
-  output_file <- tempfile(pattern = paste0(package_name, "_functions_output"), fileext = ".md")
+  # Creazione file Markdown
+  output_file <- paste0(package_name, "_functions_output.md")
   sink(output_file)
 
   # Intestazione Markdown
@@ -49,7 +49,7 @@ print_documentation <- function(package_name) {
       link_name <- gsub("[^[:alnum:]]", "-", func_name) # Generazione del link valido
       cat(sprintf("## %s {#%s}\n", func_name, link_name))
       cat("```r\n")
-      print(func)
+      cat(paste(deparse(func), collapse = "\n"))
       cat("\n```\n\n")
     }
   }
@@ -62,5 +62,7 @@ print_documentation <- function(package_name) {
     render(output_file, pdf_document(toc = TRUE, toc_depth = 2))
   }, error = function(e) {
     message("An error occurred during rendering: ", e$message)
+  }, warning = function(w) {
+    message("A warning occurred during rendering: ", w$message)
   })
 }
