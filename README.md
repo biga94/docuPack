@@ -1,5 +1,4 @@
-# docuPack 
-<img src="man/sticker.png" align="right" width="120px"/>
+# docuPack <img src="man/sticker.png" align="right" width="180px"/>
 
 [![CRAN Status](https://www.r-pkg.org/badges/version/docuPack)](https://CRAN.R-project.org/package=docuPack)
 [![Coverage Status](https://codecov.io/gh/biga94/docuPack/branch/main/graph/badge.svg)](https://codecov.io/gh/biga94/docuPack)
