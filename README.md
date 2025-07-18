@@ -9,7 +9,7 @@
 ## Installation 
 Before using **docuPack**, ensure that the package of interest is installed in your R environment.
 1. Install **docuPack** from GitHub:
- ```devtools::install_github("your_github_username/docuPack")```
+ ```devtools::install_github("biga94/docuPack")```
  2. Load the package: 
  ```library(docuPack)```
 
